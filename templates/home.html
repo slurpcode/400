@@ -11,7 +11,7 @@
     <ul>
     {% for x in info %}
         <li>
-            <a href="{{ x[1] }}" target="_blank">{{ x[0] }}</a>
+            <a href="{{ x[1] }}" target="_blank">{{x[2]}}: {{ x[0] }}</a>
         </li>
     {% endfor %}
     </ul>
