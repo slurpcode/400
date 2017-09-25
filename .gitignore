@@ -1,0 +1,12 @@
+.idea/
+__pycache__/
+
+.idea/flask1.iml
+
+.idea/misc.xml
+
+.idea/modules.xml
+
+.idea/preferred-vcs.xml
+
+.idea/workspace.xml

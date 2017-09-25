@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Home</title>
+</head>
+<body>
+    <img src="{{ url_for('static', filename='img/python-powered.png') }}"
+         alt="This website is powered by Python." title="Python Powered">
+    <br>
+    {% for x in info %}
+        <li>
+            <a href="{{ x[1] }}" target="_blank">{{ x[0] }}</a>
+        </li>
+    {% endfor %}
+</body>
+</html>
