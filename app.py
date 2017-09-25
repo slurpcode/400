@@ -8,7 +8,9 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     user_search = 'https://api.github.com/search/users?q=followers:1..10000000&per_page=100'
-    user_searches = [user_search, '%s%s' % (user_search, '&page=2')]
+    user_searches = []
+    for i in range(1, 5):
+        user_searches.append('%s%s%s' % (user_search, '&page=', i))
     loads = []
     info = []
 
@@ -34,4 +36,4 @@ def hello(name=None):
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(port=8081, debug=True)
