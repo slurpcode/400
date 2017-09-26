@@ -8,8 +8,10 @@
   </head>
   <body>
     {% block header %}
-        <img src="{{ url_for('static', filename='img/python-powered.png') }}"
-         alt="This website is powered by Python." title="Python Powered">
+        <a href="/">
+            <img src="{{ url_for('static', filename='img/python-powered.png') }}"
+             alt="This website is powered by Python." title="Python Powered">
+        </a>
     {% endblock %}
     <div id="content">{% block content %}{% endblock %}</div>
     <div id="footer">
