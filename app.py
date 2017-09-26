@@ -1,11 +1,5 @@
 from flask import Flask, render_template
-from flask_caching import Cache
-from lxml import html
-import requests
-import json
-
 app = Flask(__name__)
-cache = Cache(app, config={'CACHE_TYPE': 'simple'})
 
 
 @app.route('/')
