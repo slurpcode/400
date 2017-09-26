@@ -8,26 +8,13 @@ app = Flask(__name__)
 cache = Cache(app, config={'CACHE_TYPE': 'simple'})
 
 
-@app.route("/")
-@cache.cached(timeout=3600)
+@app.route('/')
 def home():
-    user_search = 'https://api.github.com/search/users?q=followers:1..10000000&per_page=100'
-    user_searches = []
-    for i in range(1, 5):
-        user_searches.append('%s%s%s' % (user_search, '&page=', i))
-    loads = []
-    info = []
-
-    for api_search in user_searches:
-        loads.append(json.loads(requests.get(api_search).content))
-    for i, each_json in enumerate(loads):
-        for j, person in enumerate(each_json['items'], 1):
-            k = i * 100 + j
-            tree = html.fromstring(requests.get(person['html_url']).content)
-            followers = tree.xpath('//div[contains(@class,"user-profile-nav")]//a[contains(normalize-space(text()),"Followers")]/span/text()')[0].strip()
-            #print(k, followers, person)
-            info.append([person['login'], person['html_url'], followers])
-    return render_template('home.html', info=info)
+    arr = []
+    with open('data/task.csv') as fname:
+        for line in fname:
+            arr.append(line.rstrip().split(','))
+    return render_template('home.html', info=arr)
 
 
 @app.errorhandler(404)
