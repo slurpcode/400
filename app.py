@@ -1,11 +1,13 @@
+# A very simple Flask Hello World app for you to get started with...
 from flask import Flask, render_template
+
 app = Flask(__name__)
 
 
 @app.route('/')
 def home():
     arr = []
-    with open('data/task.csv') as fname:
+    with open(site_path + 'data/task.csv') as fname:
         for line in fname:
             arr.append(line.rstrip().split(','))
     return render_template('home.html', info=arr)
@@ -23,4 +25,7 @@ def hello(name=None):
 
 
 if __name__ == '__main__':
+    site_path = './'
     app.run(port=8081, debug=True)
+else:
+    site_path = '/home/Beast/mysite/'
