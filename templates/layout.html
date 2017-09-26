@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    {% block head %}
+        <meta charset="UTF-8">
+        <title>{% block title %}{% endblock %} - Python Home</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block header %}
+        <img src="{{ url_for('static', filename='img/python-powered.png') }}"
+         alt="This website is powered by Python." title="Python Powered">
+    {% endblock %}
+    <div id="content">{% block content %}{% endblock %}</div>
+    <div id="footer">
+        {% block footer %}
+            &copy; Copyright 2017 by <a href="http://thebeast.me/" target="_blank">Beast</a>.
+        {% endblock %}
+    </div>
+    <span class="typer" id="main" data-words="Beast:Beauty and the Beast...!??!!??:Bring out the Beast...?!??!!?:A powerful Beast...?!?!!!!:Beast is tested daily, and is trained by an even more powerful Beast...!?!?!?!!?!:Beast wants to be the most powerful Beast......??!?!!:A truly magical and wondrous Beast"
+          data-colors="black" data-delim=":" data-delay="100" data-deleteDelay="1000"></span>
+    <span class="cursor" data-owner="main"></span>
+    <script src="../static/js/typer.js"></script>
+  </body>
+</html>

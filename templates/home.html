@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Python Home</title>
-</head>
-<body>
-    <img src="{{ url_for('static', filename='img/python-powered.png') }}"
-         alt="This website is powered by Python." title="Python Powered">
+{% extends "layout.html" %}
+{% block title %}Index{% endblock %}
+{% block content %}
+    <p>
+        Welcome to my awesome homepage.
+    </p>
     <br>
     <ul>
     {% for x in info %}
@@ -15,8 +12,4 @@
         </li>
     {% endfor %}
     </ul>
-    <span class="typer" id="main" data-words="Beast:Beauty and the Beast...!??!!??:Bring out the Beast...?!??!!?:A powerful Beast...?!?!!!!:Beast is tested daily, and is trained by and even more powerful Beast...!?!?!?!!?!:Beast wants to be the most powerful Beast......??!?!!" data-colors="black" data-delim=":" data-delay="100" data-deleteDelay="1000"></span>
-    <span class="cursor" data-owner="main"></span>
-    <script src="static/js/typer.js"></script>
-</body>
-</html>
+{% endblock %}}
