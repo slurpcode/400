@@ -8,14 +8,29 @@
   </head>
   <body>
     {% block header %}
-        <a href="/">
-            <img src="{{ url_for('static', filename='img/python-powered.png') }}"
-             alt="This website is powered by Python." title="Python Powered">
-        </a>
+
     {% endblock %}
     <div id="content">{% block content %}{% endblock %}</div>
     <div id="footer">
         {% block footer %}
+            <h1>
+                This website is powered by Python, Flask and Jinja2.
+            </h1>
+            <a href="https://www.python.org/" target="_blank">
+                <img src="{{ url_for('static', filename='img/python-logo.png') }}"
+                 alt="This website is powered by Python." title="Python Powered">
+            </a>
+            <br>
+            <a href="http://flask.pocoo.org/" target="_blank">
+                <img src="{{ url_for('static', filename='img/flask.svg') }}"
+                 alt="This website is powered by Flask." title="Flask Powered">
+            </a>
+            <br>
+            <a href="http://jinja.pocoo.org/" target="_blank">
+                <img src="{{ url_for('static', filename='img/jinja.png') }}"
+                 alt="This website is powered by Jinja2." title="Jinja2 Powered">
+            </a>
+            <br>
             &copy; Copyright 2017 by <a href="http://thebeast.me/" target="_blank">Beast</a>.
         {% endblock %}
     </div>
