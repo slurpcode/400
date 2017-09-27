@@ -9,7 +9,8 @@
   <body>
     {% block header %}
         <a href="/">
-            <img src="{{ url_for('static', filename='img/therealbeast.png') }}" alt="The Real Beast" title="The Real Beast">
+            <img src="{{ url_for('static', filename='img/therealbeast.png') }}"
+                 alt="The Real Beast" title="The Real Beast">
         </a>
     {% endblock %}
     <div id="content">{% block content %}{% endblock %}</div>
@@ -20,24 +21,24 @@
             </h1>
             <a href="https://www.python.org/" target="_blank">
                 <img src="{{ url_for('static', filename='img/python-logo.png') }}"
-                 alt="This website is powered by Python." title="Python Powered" style="max-width:450px;">
+                     alt="This website is powered by Python." title="Python Powered" style="max-width:450px;">
             </a>
             <br>
             <a href="http://flask.pocoo.org/" target="_blank">
                 <img src="{{ url_for('static', filename='img/flask.svg') }}"
-                 alt="This website is powered by Flask." title="Flask Powered"  style="max-width:400px;">
+                     alt="This website is powered by Flask." title="Flask Powered"  style="max-width:400px;">
             </a>
             <br>
             <br>
             <a href="http://jinja.pocoo.org/" target="_blank">
                 <img src="{{ url_for('static', filename='img/jinja.png') }}"
-                 alt="This website is powered by Jinja2." title="Jinja2 Powered">
+                     alt="This website is powered by Jinja2." title="Jinja2 Powered">
             </a>
             <br>
             <br>
             <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5" target="_blank">
                 <img src="{{ url_for('static', filename='img/html5.png') }}"
-                 alt="This website is powered by HTML5." title="HTML5 Powered">
+                     alt="This website is powered by HTML5." title="HTML5 Powered">
             </a>
             <br>
             <br>
