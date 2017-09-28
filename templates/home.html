@@ -5,11 +5,11 @@
         Welcome to my awesome homepage.
     </h2>
     <h3>Github Top 400 sorted by number of followers</h3>
-    <ul>
+    <ol>
     {% for x in info %}
         <li>
             <a href="{{ x[1] }}" target="_blank">{{x[2]}}: {{ x[0] }}</a>
         </li>
     {% endfor %}
-    </ul>
+    </ol>
 {% endblock %}}
