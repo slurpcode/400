@@ -1,4 +1,6 @@
 {% extends "layout.html" %}
 {% block content %}
-    <h1>Nothing to see here, move along.</h1>
+    <img src="{{ url_for('static', filename='img/obi.jpg') }}"
+         alt="This isn't the content you're looking for...move along"
+         title="This isn't the content you're looking for...move along">
 {% endblock %}}

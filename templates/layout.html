@@ -3,7 +3,20 @@
   <head>
     {% block head %}
         <meta charset="UTF-8">
-        <title>{% block title %}{% endblock %} - Python Home</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}{% endblock %} - Beast's Python Home</title>
+
+        <meta property="og:image" content="https://https://beast.pythonanywhere.com/static/img/flask.svg">
+        <meta property="og:image:alt" content="Flask web development one drop at a time">
+
+        <meta property="og:site_name" content="Beast's Python Home">
+        <meta property="og:title" content="Flask...web development one drop at a time">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://beast.pythonanywhere.com">
+        <style>
+            #footer a {color:white;}
+            #footer span a {color: black;}
+        </style>
     {% endblock %}
   </head>
   <body>
@@ -42,7 +55,9 @@
             </a>
             <br>
             <br>
-            &copy; Copyright 2017 by <a href="http://thebeast.me/" target="_blank" rel="noopener">Beast</a>.
+            <span>
+                &copy; Copyright {{ year }} <a href="http://thebeast.me/" target="_blank" rel="noopener">The "Real" Beast</a>
+            </span>
         {% endblock %}
     </div>
     <span class="typer" id="main" data-words="Beast:Beauty and the Beast...!??!!??:Bring out the Beast...?!??!!?:A powerful Beast...?!?!!!!:Beast is tested daily, and is trained by an even more powerful Beast...!?!?!?!!?!:Beast wants to be the most powerful Beast......??!?!!:A truly magical and wondrous Beast"

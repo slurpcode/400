@@ -1,5 +1,6 @@
 """A very simple Flask Hello World app for you to get started with..."""
 from flask import Flask, render_template
+from datetime import datetime
 
 app = Flask(__name__)
 
@@ -11,7 +12,7 @@ def home():
     with open(site_path + 'data/task.csv') as fname:
         for line in fname:
             arr.append(line.rstrip().split(','))
-    return render_template('home.html', info=arr)
+    return render_template('home.html', info=arr, year=datetime.today().year)
 
 
 @app.errorhandler(404)
