@@ -2,7 +2,7 @@
 
 Github Top 400 sorted by number of followers.
 
-http://beast.pythonanywhere.com/
+https://beast.pythonanywhere.com/
 
 [Flask](http://flask.pocoo.org/) web development, one drop at a time.
 
