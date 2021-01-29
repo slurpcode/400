@@ -32,4 +32,4 @@ if __name__ == '__main__':
     site_path = './'
     app.run(port=8081, debug=True)
 else:
-    site_path = '/home/Beast/mysite/'
+    site_path = '/home/400/mysite/'
