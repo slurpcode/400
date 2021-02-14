@@ -1,6 +1,6 @@
-# Pythonanywhere demo site
+# The 400 - Python powered Flask framework website
 
-Github Top 400 sorted by number of followers.
+GitHub Top 400 Spartans.
 
 [Flask](http://flask.pocoo.org/) web development, one drop at a time.
 
